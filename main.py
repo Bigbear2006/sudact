@@ -6,12 +6,12 @@ from utils.parse import parse_article
 
 async def main():
     start = time.time()
-    print('start...')
+    print('Начинаю выполнение функции...')
     connector = aiohttp.TCPConnector(ssl=False)
     async with aiohttp.ClientSession(base_url='https://sudact.ru', connector=connector) as session:
         decisions = await parse_article(session, '/law/apk-rf/razdel-i/glava-1/statia-1/')
     end = time.time()
-    print(f'Функция выполнена за {end - start} секунд.')
+    print(f'Функция выполнена за {end - start} секунд. Полученные данные:')
     print(*decisions, sep='\n')
 
 if __name__ == '__main__':

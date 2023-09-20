@@ -1,0 +1,19 @@
+version: '24.0.6'
+
+services:
+  parser:
+    build: .
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+
+volumes:
+  pgdata:

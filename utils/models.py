@@ -14,7 +14,7 @@ class Decision(Model):
     number = pw.CharField()
     date = pw.DateField()
     case_number = pw.CharField()
-    place = pw.CharField(null=True)
+    place = pw.CharField()
     judge = pw.CharField()
     text = pw.TextField()
 

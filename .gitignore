@@ -1,7 +1,5 @@
 /env
 /.idea
 /pgdata
-/__pycache__
-utils/__pycache__
 /.env
 /sudact.db
